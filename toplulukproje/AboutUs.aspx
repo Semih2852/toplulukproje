@@ -139,9 +139,9 @@ body {
     <ul class="nav-list">
       <li><a href="https://localhost:44323/MainPage">Ana Sayfa</a></li>
       <li><a href="https://localhost:44323/AboutUs">Hakkımızda</a></li>
-      <li><a href="https://example.com/programs">Etkinlikler</a></li>
-      <li><a href="https://example.com/donate">Bağış Yap</a></li>
-      <li><a href="https://example.com/contact">İletişim</a></li>
+      <li><a href="https://localhost:44323/Activities">Etkinlikler</a></li>
+      <li><a href="https://localhost:44323/Donate">Bağış Yap</a></li>
+      <li><a href="https://localhost:44323/Contact">İletişim</a></li>
     </ul>
   </nav>
 
@@ -216,7 +216,7 @@ Olumlu etki ve toplum hizmetiyle dolu on yılı kutluyoruz</p>
   </div>
 
   <footer class="footer">
-    <p>© 2024 Hope Foundation. All rights reserved.</p>
+    <p>&copy; 2024 Umut Vakfı. Tüm hakları saklıdır.</p>
     <div class="social-links">
       <a href="https://facebook.com">Facebook</a>
       <a href="https://twitter.com">Twitter</a>

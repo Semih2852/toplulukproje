@@ -145,23 +145,23 @@
 <body>
     <form id="form1" runat="server">
         <header class="header">
-            <h1>Hope Foundation</h1>
+            <h1>Umut Vakfı</h1>
         </header>
 
         <nav class="nav">
             <ul class="nav-list">
-                <li><a href="https://localhost:44323/MainPage">Home</a></li>
-                <li><a href="https://example.com/about">About Us</a></li>
-                <li><a href="https://example.com/programs">Programs</a></li>
-                <li><a href="https://example.com/donate">Donate</a></li>
-                <li><a href="https://example.com/contact">Contact</a></li>
+      <li><a href="https://localhost:44323/MainPage">Ana Sayfa</a></li>
+      <li><a href="https://localhost:44323/AboutUs">Hakkımızda</a></li>
+      <li><a href="https://localhost:44323/Activities">Etkinlikler</a></li>
+      <li><a href="https://localhost:44323/Donate">Bağış Yap</a></li>
+      <li><a href="https://localhost:44323/Contact">İletişim</a></li>
             </ul>
         </nav>
 
         <section class="hero">
             <h1>Birlikte Fark Yaratmak</h1>
             <p>Topluluğumuzda olumlu değişim yaratma misyonumuza bize katılın</p>
-            <a href="https://example.com/donate" class="cta-button">Hızlı Bağış</a>
+            <a href="https://localhost:44323/Donate" class="cta-button">Hızlı Bağış</a>
         </section>
 
         <section class="features">
@@ -207,7 +207,7 @@
         </section>
         
         <footer class="footer">
-            <p>© 2024 Hope Foundation. All rights reserved.</p>
+            <p>&copy; 2024 Umut Vakfı Tüm hakları saklıdır.</p>
             <div class="social-links">
                 <a href="https://facebook.com">Facebook</a>
                 <a href="https://twitter.com">Twitter</a>
