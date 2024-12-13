@@ -13,9 +13,5 @@ namespace toplulukproje
         {
 
         }
-        public void LoginButton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -1,136 +1,261 @@
-﻿<%@ Page Title="Login Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="toplulukproje._Default" %>
+﻿<html><head><base href="/">
+<meta charset="UTF-8">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
-            font-family: Arial, sans-serif;
-        }
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-        .login-container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 400px;
-        }
+.header {
+    background-color: #1e3c72;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
-        .login-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+h1 {
+    color: white;
+    margin-right: 30px;
+}
 
-        .login-header h1 {
-            color: #fff;
-            margin: 0;
-            font-size: 2em;
-        }
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+.nav {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: flex;
+    gap: 15px;
+}
+.nav-link {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.nav-link:hover {
+    background-color: #2a5298;
+}
 
-        .form-group label {
-            display: block;
-            color: #fff;
-            margin-bottom: 5px;
-        }
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+#profileButton {
+    display: none;
+    background-color: #1e3c72;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
 
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
+#profileButton:hover {
+    background-color: #2a5298;
+}
 
-        .form-group input:focus {
-            outline: none;
-            background: rgba(255, 255, 255, 0.2);
-        }
+.nav-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
 
-        .login-button {
-            width: 100%;
-            padding: 12px;
-            background: #4CAF50;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
+.nav-list a:hover {
+  color: #1e3c72;
+}
 
-        .login-button:hover {
-            background: #45a049;
-        }
+.login-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
 
-        .forgot-password {
-            text-align: center;
-            margin-top: 15px;
-        }
+.login-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
 
-        .forgot-password a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
+.form-title {
+  color: #1e3c72;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
 
-        .forgot-password a:hover {
-            color: #4CAF50;
-        }
+.form-group {
+  margin-bottom: 1.5rem;
+}
 
-        .validation-summary-errors {
-            color: #ff4444;
-            text-align: center;
-            margin-top: 10px;
-            padding: 10px;
-            background: rgba(255, 0, 0, 0.1);
-            border-radius: 5px;
-        }
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: bold;
+}
 
-        .field-validation-error {
-            color: #ff4444;
-            font-size: 0.875em;
-            margin-top: 5px;
-            display: block;
-        }
-    </style>
+.form-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
 
-    <div class="login-container">
-        <div class="login-header">
-            <h1>Hoşgeldiniz!</h1>
-        </div>
-        <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="validation-summary-errors" />
-        
-        <div class="form-group">
-            <asp:Label ID="LabelUsername" runat="server" Text="E-mail" AssociatedControlID="TextBoxUsername" />
-            <asp:TextBox ID="TextBoxUsername" runat="server" CssClass="form-control" />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorUsername" runat="server" ControlToValidate="TextBoxUsername" ErrorMessage="E-mail girmelisiniz." CssClass="field-validation-error" />
-        </div>
-        
-        <div class="form-group">
-            <asp:Label ID="LabelPassword" runat="server" Text="Şifre:" AssociatedControlID="TextBoxPassword" />
-            <asp:TextBox ID="TextBoxPassword" runat="server" TextMode="Password" CssClass="form-control" />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPassword" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="Şifre girmelisiniz." CssClass="field-validation-error" />
-        </div>
-        
-        <asp:Button ID="LoginButton" runat="server" Text="Giriş Yap" CssClass="login-button" OnClick="LoginButton_Click" />
-        
-        <div class="forgot-password">
-            <asp:HyperLink ID="ForgotPasswordLink" runat="server" NavigateUrl="MainPage.aspx">Şifremi Unuttum?</asp:HyperLink>
-        </div>
+.form-input:focus {
+  outline: none;
+  border-color: #1e3c72;
+}
+
+.form-button {
+  width: 100%;
+  padding: 1rem;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-button:hover {
+  background: #2a5298;
+}
+
+.form-links {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.form-links a {
+  color: #1e3c72;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.form-links a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background: #333;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+</style>
+</head>
+<body>
+<header class="header">
+    <div class="header-content">
+        <h1>Umut Vakfı</h1>
+        <nav class="nav">
+            <a href="/login" class="nav-link">Giriş Yap</a>
+            <a href="/register" class="nav-link">Kayıt Ol</a>
+            <button id="profileButton" class="nav-link">Profil</button>
+        </nav>
     </div>
-</asp:Content>
+</header>
+
+
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="https://localhost:44323/MainPage">Ana Sayfa</a></li>
+      <li><a href="https://localhost:44323/AboutUs">Hakkımızda</a></li>
+      <li><a href="https://localhost:44323/Activities">Etkinlikler</a></li>
+      <li><a href="https://localhost:44323/Donate">Bağış Yap</a></li>
+      <li><a href="https://localhost:44323/Contact">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <div class="login-container">
+    <form class="login-form" action="https://example.com/login" method="POST">
+      <h2 class="form-title">Giriş Yap</h2>
+      
+      <div class="form-group">
+        <label class="form-label" for="email">E-posta Adresi</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label" for="password">Şifre</label>
+        <input type="password" id="password" name="password" class="form-input" required>
+      </div>
+
+      <div class="remember-me">
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Beni Hatırla</label>
+      </div>
+      
+      <button type="submit" class="form-button">Giriş Yap</button>
+      
+      <div class="form-links">
+        <a href="https://example.com/forgot-password">Şifremi Unuttum</a>
+        <span>|</span>
+        <a href="https://example.com/register">Yeni Hesap Oluştur</a>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <p>© 2024 Hope Foundation. Tüm hakları saklıdır.</p>
+    <div class="social-links">
+      <a href="https://facebook.com">Facebook</a>
+      <a href="https://twitter.com">Twitter</a>
+      <a href="https://instagram.com">Instagram</a>
+      <a href="https://linkedin.com">LinkedIn</a>
+    </div>
+  </footer>
+</body></html>
