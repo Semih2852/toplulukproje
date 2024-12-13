@@ -150,7 +150,7 @@
 
         <nav class="nav">
             <ul class="nav-list">
-                <li><a href="https://example.com/home">Home</a></li>
+                <li><a href="https://localhost:44323/MainPage">Home</a></li>
                 <li><a href="https://example.com/about">About Us</a></li>
                 <li><a href="https://example.com/programs">Programs</a></li>
                 <li><a href="https://example.com/donate">Donate</a></li>
@@ -159,9 +159,9 @@
         </nav>
 
         <section class="hero">
-            <h1>Making a Difference Together</h1>
-            <p>Join us in our mission to create positive change in our community</p>
-            <a href="https://example.com/donate" class="cta-button">Donate Now</a>
+            <h1>Birlikte Fark Yaratmak</h1>
+            <p>Topluluğumuzda olumlu değişim yaratma misyonumuza bize katılın</p>
+            <a href="https://example.com/donate" class="cta-button">Hızlı Bağış</a>
         </section>
 
         <section class="features">
@@ -169,43 +169,43 @@
                 <svg class="feature-icon" viewBox="0 0 24 24">
                     <path fill="#1e3c72" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
-                <h3>Education Support</h3>
-                <p>Providing educational opportunities to underprivileged children</p>
+                <h3>Eğitim Desteği</h3>
+                <p>İmkanı olmayan çocuklara eğitim olanağı sağlanması</p>
             </div>
             <div class="feature-card">
                 <svg class="feature-icon" viewBox="0 0 24 24">
                     <path fill="#1e3c72" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                 </svg>
-                <h3>Healthcare Programs</h3>
-                <p>Ensuring access to quality healthcare for all</p>
+                <h3>Sağlık Programları</h3>
+                <p>Herkesin kaliteli sağlık hizmetlerine erişiminin sağlanması</p>
             </div>
             <div class="feature-card">
                 <svg class="feature-icon" viewBox="0 0 24 24">
                     <path fill="#1e3c72" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
                 </svg>
-                <h3>Community Development</h3>
-                <p>Building stronger communities through local initiatives</p>
+                <h3>Toplumsal Kalkınma</h3>
+                <p>Yerel girişimler aracılığıyla daha güçlü topluluklar oluşturmak</p>
             </div>
         </section>
 
         <section class="impact-section">
-            <h2>Our Impact</h2>
+            <h2>Etkimiz</h2>
             <div class="impact-numbers">
                 <div class="impact-item">
                     <div class="impact-number">10,000+</div>
-                    <p>Lives Impacted</p>
+                    <p>Etkilenen Yaşamlar</p>
                 </div>
                 <div class="impact-item">
                     <div class="impact-number">50+</div>
-                    <p>Active Programs</p>
+                    <p>Aktif Programlar</p>
                 </div>
                 <div class="impact-item">
                     <div class="impact-number">100+</div>
-                    <p>Volunteers</p>
+                    <p>Gönüllüler</p>
                 </div>
             </div>
         </section>
-
+        
         <footer class="footer">
             <p>© 2024 Hope Foundation. All rights reserved.</p>
             <div class="social-links">
