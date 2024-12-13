@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Bağış Yap - Hope Foundation</title>
+    <title>Bağış Yap</title>
     <base href="/">
     <meta charset="UTF-8">
     <style>
@@ -204,12 +204,62 @@
             color: #666;
             margin-top: 0.5rem;
         }
+        .auth-button {
+  padding: 0.3rem 0.7rem; /* Butonun boyutlarını küçültmek için */
+  font-size: 0.9rem; /* Yazı boyutunu küçültmek için */
+  border: 2px solid white;
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.auth-button:hover {
+  background: white;
+  color: #1e3c72;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  position: absolute;
+  top: 20px; 
+  right: 20px; 
+}
+.profile-button {
+  display: none;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem
+  background: white;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  position: absolute;
+  top: 20px
+  right: 20px;
+}
+
+.profile-button:hover {
+  background: #f0f0f0;
+}
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <header class="header">
+                                <style>
+        h2 {
+            text-align: right;
+        }
+    </style>
+            <h2>
+    <a href="https://localhost:44323/Login" class="auth-button">Giriş Yap</a>
+    <a href="https://localhost:44323/Register" class="auth-button">Kayıt Ol</a>
+            </h2>
                 <h1>Umut Vakfı</h1>
             </header>
 
@@ -217,7 +267,7 @@
                 <ul class="nav-list">
       <li><a href="https://localhost:44323/MainPage">Ana Sayfa</a></li>
       <li><a href="https://localhost:44323/AboutUs">Hakkımızda</a></li>
-      <li><a href="https://localhost:44323/Activities">Etkinlikler</a></li>
+      <li><a href="https://localhost:44323/Activities">Etkinlikler ve Duyurular</a></li>
       <li><a href="https://localhost:44323/Donate">Bağış Yap</a></li>
       <li><a href="https://localhost:44323/Contact">İletişim</a></li>
                 </ul>

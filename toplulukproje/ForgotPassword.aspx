@@ -1,5 +1,5 @@
 ﻿<html><head><base href="/">
-    <title>Giriş Yap</title>
+    <title>Şifremi Unuttum</title>
 <meta charset="UTF-8">
 <style>
 * {
@@ -47,7 +47,7 @@ body {
   color: #1e3c72;
 }
 
-.login-container {
+.reset-container {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -55,7 +55,7 @@ body {
   padding: 2rem;
 }
 
-.login-form {
+.reset-form {
   background: white;
   padding: 2rem;
   border-radius: 10px;
@@ -69,6 +69,12 @@ body {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 1.8rem;
+}
+
+.form-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
 }
 
 .form-group {
@@ -106,6 +112,7 @@ body {
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s;
+  margin-top: 1rem;
 }
 
 .form-button:hover {
@@ -132,6 +139,7 @@ body {
   color: white;
   padding: 2rem;
   text-align: center;
+  margin-top: auto;
 }
 
 .social-links {
@@ -143,19 +151,6 @@ body {
   margin: 0 1rem;
   text-decoration: none;
 }
-
-.remember-me {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.remember-me input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-}
-
 </style>
 </head>
 <body>
@@ -173,26 +168,25 @@ body {
     </ul>
   </nav>
 
-  <div class="login-container">
-    <form class="login-form" action="https://example.com/login" method="POST">
-      <h2 class="form-title">Giriş Yap</h2>
+  <div class="reset-container">
+    <form class="reset-form" action="https://example.com/reset-password" method="POST">
+      <h2 class="form-title">Şifremi Unuttum</h2>
+      <p class="form-description">E-posta adresinizi girin. Sonrasında yeni şifrenizi girin. Otomatik olarak değiştirilecektir.</p>
       
       <div class="form-group">
         <label class="form-label" for="email">E-posta Adresi</label>
         <input type="email" id="email" name="email" class="form-input" required>
       </div>
-      
+
       <div class="form-group">
-        <label class="form-label" for="password">Şifre</label>
+        <label class="form-label" for="password">Yeni Şifre</label>
         <input type="password" id="password" name="password" class="form-input" required>
       </div>
       
-      <button type="submit" class="form-button">Giriş Yap</button>
+      <button type="submit" class="form-button">Şifre Sıfırla</button>
       
       <div class="form-links">
-        <a href="https://localhost:44323/ForgotPassword">Şifremi Unuttum?</a>
-        <span>|</span>
-        <a href="https://localhost:44323/Register">Kayıt Ol</a>
+        <a href="https://localhost:44323/Login">Giriş Sayfasına Dön</a>
       </div>
     </form>
   </div>

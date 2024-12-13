@@ -1,5 +1,5 @@
 ﻿<html><head><base href="/">
-    <title>Giriş Yap</title>
+    <title>Kayıt Ol</title>
 <meta charset="UTF-8">
 <style>
 * {
@@ -47,7 +47,7 @@ body {
   color: #1e3c72;
 }
 
-.login-container {
+.register-container {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -55,13 +55,13 @@ body {
   padding: 2rem;
 }
 
-.login-form {
+.register-form {
   background: white;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .form-title {
@@ -106,6 +106,7 @@ body {
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s;
+  margin-top: 1rem;
 }
 
 .form-button:hover {
@@ -132,6 +133,7 @@ body {
   color: white;
   padding: 2rem;
   text-align: center;
+  margin-top: auto;
 }
 
 .social-links {
@@ -144,16 +146,15 @@ body {
   text-decoration: none;
 }
 
-.remember-me {
+.form-row {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.remember-me input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
 }
 
 </style>
@@ -173,13 +174,35 @@ body {
     </ul>
   </nav>
 
-  <div class="login-container">
-    <form class="login-form" action="https://example.com/login" method="POST">
-      <h2 class="form-title">Giriş Yap</h2>
+  <div class="register-container">
+    <form class="register-form" action="https://example.com/register" method="POST">
+      <h2 class="form-title">Yeni Hesap Oluştur</h2>
       
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="firstName">Adı</label>
+          <input type="text" id="firstName" name="firstName" class="form-input" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="lastName">Soyadı</label>
+          <input type="text" id="lastName" name="lastName" class="form-input" required>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label" for="tcno">T.C. Kimlik No</label>
+        <input type="text" id="tcno" name="tcno" class="form-input" pattern="[0-9]{11}" maxlength="11" required>
+      </div>
+
       <div class="form-group">
         <label class="form-label" for="email">E-posta Adresi</label>
         <input type="email" id="email" name="email" class="form-input" required>
+      </div>
+
+       <div class="form-group">
+        <label class="form-label" for="telefon">Telefon Numarası</label>
+        <input type="telefon" id="telefon" name="telefon" class="form-input" required>
       </div>
       
       <div class="form-group">
@@ -187,12 +210,16 @@ body {
         <input type="password" id="password" name="password" class="form-input" required>
       </div>
       
-      <button type="submit" class="form-button">Giriş Yap</button>
+      <div class="form-group">
+        <label class="form-label" for="passwordConfirm">Şifre Tekrar</label>
+        <input type="password" id="passwordConfirm" name="passwordConfirm" class="form-input" required>
+      </div>
+      
+      <button type="submit" class="form-button">Kayıt Ol</button>
       
       <div class="form-links">
-        <a href="https://localhost:44323/ForgotPassword">Şifremi Unuttum?</a>
-        <span>|</span>
-        <a href="https://localhost:44323/Register">Kayıt Ol</a>
+        <span>Zaten hesabınız var mı?</span>
+        <a href="https://localhost:44323/Login">Giriş Yap</a>
       </div>
     </form>
   </div>
