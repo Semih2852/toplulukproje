@@ -1,6 +1,12 @@
-﻿<html><head><base href="/">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="toplulukproje._Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
     <title>Giriş Yap</title>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <style>
 * {
   margin: 0;
@@ -174,7 +180,7 @@ body {
   </nav>
 
   <div class="login-container">
-    <form class="login-form" action="https://example.com/login" method="POST">
+    <form id="form1"  runat="server" class="login-form" action="https://example.com/login" method="POST">
       <h2 class="form-title">Giriş Yap</h2>
       
       <div class="form-group">

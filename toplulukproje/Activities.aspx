@@ -1,9 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Activities.aspx.cs" Inherits="toplulukproje.Activities" %>
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     <title>Etkinlikler ve Duyurular</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <style>
         * {
             margin: 0;
@@ -184,8 +187,8 @@
             text-decoration: none;
         }
         .auth-button {
-  padding: 0.3rem 0.7rem; /* Butonun boyutlarını küçültmek için */
-  font-size: 0.9rem; /* Yazı boyutunu küçültmek için */
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
   border: 2px solid white;
   border-radius: 5px;
   color: black;
@@ -210,14 +213,14 @@
 .profile-button {
   display: none;
   padding: 0.3rem 0.7rem;
-  font-size: 0.9rem
+  font-size: 0.9rem;
   background: white;
   color: black;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   position: absolute;
-  top: 20px
+  top: 20px;
   right: 20px;
 }
 
@@ -255,7 +258,7 @@
             <h1 class="page-title">Etkinlikler ve Duyurular</h1>
 
             <section class="announcements-section">
-                <h2 class="section-title">Güncel Duyurular</h2>
+                <h1 class="section-title">Güncel Haberler</h1>
  <div class="announcement-list">
         <div class="announcement-card">
           <div class="announcement-date">15 Mart 2024</div>
@@ -276,7 +279,7 @@
     </section>
 
     <section class="events-section">
-      <h2 class="section-title">Yaklaşan Etkinlikler</h2>
+      <h1 class="section-title">Yaklaşan Etkinlikler</h1>
       <div class="events-grid">
         <div class="event-card">
           <div class="event-image">

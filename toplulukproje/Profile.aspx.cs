@@ -11,7 +11,12 @@ namespace toplulukproje
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ShowErrorMessage("Kayıt Başarılı!");
+        }
+        private void ShowErrorMessage(string message)
+        {
+            ScriptManager.RegisterStartupScript(this, GetType(), "ErrorAlert",
+                $"alert('{message}');", true);
         }
     }
 }

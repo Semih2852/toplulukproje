@@ -1,6 +1,12 @@
-﻿<html><head><base href="/">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ForgotPassword.aspx.cs" Inherits="toplulukproje.WebForm2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
     <title>Şifremi Unuttum</title>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <style>
 * {
   margin: 0;
@@ -169,7 +175,7 @@ body {
   </nav>
 
   <div class="reset-container">
-    <form class="reset-form" action="https://example.com/reset-password" method="POST">
+          <form id="form2"  runat="server" class="reset-form" action="https://example.com/reset-password" method="POST">
       <h2 class="form-title">Şifremi Unuttum</h2>
       <p class="form-description">E-posta adresinizi girin. Sonrasında yeni şifrenizi girin. Otomatik olarak değiştirilecektir.</p>
       
@@ -188,8 +194,8 @@ body {
       <div class="form-links">
         <a href="https://localhost:44323/Login">Giriş Sayfasına Dön</a>
       </div>
-    </form>
-  </div>
+             </form>
+    </div>
 
   <footer class="footer">
     <p>© 2024 Umut Vakfı. Tüm hakları saklıdır.</p>

@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     <title>Kayıt Ol</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -53,10 +54,11 @@
         }
 
         .register-container {
-            flex: 1;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
         }
 
         .register-form {
@@ -65,6 +67,7 @@
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             width: 100%;
+            max-width: 500px;
         }
 
         .form-title {
@@ -162,7 +165,6 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server" class="register-form">
             <header class="header">
         <h1>Umut Vakfı</h1>
     </header>
@@ -176,6 +178,7 @@
             </ul>
         </nav>
         <div class="register-container">
+                <form id="form1" runat="server" class="register-form">
             <h2 class="form-title">Yeni Hesap Oluştur</h2>
             
             <div class="form-row">
@@ -223,6 +226,7 @@
                 <span>Zaten hesabınız var mı?</span>
                 <a href="https://localhost:44323/Login">Giriş Yap</a>
             </div>
+                        </form>
         </div>
 
 
@@ -235,6 +239,5 @@
             <a href="https://linkedin.com">LinkedIn</a>
         </div>
     </footer>
-    </form>
 </body>
 </html>

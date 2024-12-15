@@ -1,11 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Donate.aspx.cs" Inherits="toplulukproje.Donate" %>
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     <title>Bağış Yap</title>
-    <base href="/">
-    <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <style>
         * {
             margin: 0;
@@ -205,8 +206,8 @@
             margin-top: 0.5rem;
         }
         .auth-button {
-  padding: 0.3rem 0.7rem; /* Butonun boyutlarını küçültmek için */
-  font-size: 0.9rem; /* Yazı boyutunu küçültmek için */
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
   border: 2px solid white;
   border-radius: 5px;
   color: black;
@@ -231,14 +232,14 @@
 .profile-button {
   display: none;
   padding: 0.3rem 0.7rem;
-  font-size: 0.9rem
+  font-size: 0.9rem;
   background: white;
   color: black;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   position: absolute;
-  top: 20px
+  top: 20px;
   right: 20px;
 }
 
@@ -275,7 +276,7 @@
 
             <div class="donation-container">
                 <div class="donation-header">
-                    <h2>Bağışınızla Fark Yaratın</h2>
+                    <h1>Bağışınızla Fark Yaratın</h1>
                     <p>Her bağış, ihtiyaç sahiplerine umut olmamıza yardımcı oluyor. Sizin desteğinizle daha fazla insana ulaşabiliyoruz.</p>
                 </div>
 

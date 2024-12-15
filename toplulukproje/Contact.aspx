@@ -1,11 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="toplulukproje.Contact1" %>
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     <title>İletişim</title>
-    <base href="/">
-    <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <style>
         * {
             margin: 0;
@@ -152,8 +153,8 @@
             text-decoration: none;
         }
         .auth-button {
-  padding: 0.3rem 0.7rem; /* Butonun boyutlarını küçültmek için */
-  font-size: 0.9rem; /* Yazı boyutunu küçültmek için */
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
   border: 2px solid white;
   border-radius: 5px;
   color: black;
@@ -178,14 +179,14 @@
 .profile-button {
   display: none;
   padding: 0.3rem 0.7rem;
-  font-size: 0.9rem
+  font-size: 0.9rem;
   background: white;
   color: black;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   position: absolute;
-  top: 20px
+  top: 20px;
   right: 20px;
 }
 
@@ -222,7 +223,7 @@
         <div class="contact-container">
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h2>İletişim Bilgileri</h2>
+                    <h1>İletişim Bilgileri</h1>
                     <div class="info-item">
                         <svg viewBox="0 0 24 24">
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
@@ -244,7 +245,7 @@
                 </div>
 
                 <div class="contact-form">
-                    <h2>Bize Ulaşın</h2>
+                    <h1>Bize Ulaşın</h1>
                     <asp:TextBox ID="txtName" runat="server" CssClass="form-group" Placeholder="Ad Soyad" />
                     <asp:TextBox ID="txtEmail" runat="server" CssClass="form-group" Placeholder="E-posta" TextMode="Email" />
                     <asp:TextBox ID="txtSubject" runat="server" CssClass="form-group" Placeholder="Konu" />

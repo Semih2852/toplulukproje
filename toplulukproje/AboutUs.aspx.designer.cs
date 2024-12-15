@@ -11,7 +11,7 @@ namespace toplulukproje
 {
 
 
-    public partial class WebForm1
+    public partial class _Default
     {
     }
 }

@@ -1,8 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="toplulukproje.WebForm1" %>
 
-<html><head><base href="/">
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
     <title>Hakkımızda</title>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <style>
 * {
   margin: 0;
@@ -130,8 +134,8 @@ body {
   text-decoration: none;
 }
 .auth-button {
-  padding: 0.3rem 0.7rem; /* Butonun boyutlarını küçültmek için */
-  font-size: 0.9rem; /* Yazı boyutunu küçültmek için */
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
   border: 2px solid white;
   border-radius: 5px;
   color: black;
@@ -156,14 +160,14 @@ body {
 .profile-button {
   display: none;
   padding: 0.3rem 0.7rem;
-  font-size: 0.9rem
+  font-size: 0.9rem;
   background: white;
   color: black;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   position: absolute;
-  top: 20px
+  top: 20px;
   right: 20px;
 }
 
@@ -173,6 +177,7 @@ body {
 </style>
 </head>
 <body>
+    <form id="form1" runat="server">
   <header class="header">
                       <style>
         h2 {
@@ -198,23 +203,23 @@ body {
 
   <section class="about-hero">
     <h1>Umut Vakfı Hakkında</h1>
-    <p>2010'dan Bu Yana Olumlu Değişim Yaratmaya Adanmış</p>
+    <p>2010'dan Bu Yana Olumlu Değişim Yaratmaya Adanmış Topluluk</p>
   </section>
 
   <div class="about-content">
     <section class="mission-vision">
       <div class="mission-card">
-        <h2>Misyonumuz</h2>
+        <h1>Misyonumuz</h1>
         <p>Sürdürülebilir kalkınma girişimleri, kaliteli eğitim ve erişilebilir sağlık hizmetleri aracılığıyla toplulukları güçlendirmek ve hizmet verdiğimiz kişilerin hayatlarında kalıcı olumlu etki yaratmak.</p>
       </div>
       <div class="vision-card">
-        <h2>Vizyonumuz</h2>
+        <h1>Vizyonumuz</h1>
         <p>Her bireyin gelişmek, büyümek ve topluluğun gelişimine katkıda bulunmak için eşit fırsatlara sahip olduğu bir dünya.</p>
       </div>
     </section>
 
     <section class="team-section">
-      <h2>Gönüllü Takımımız</h2>
+      <h1>Gönüllü Takımımız</h1>
       <div class="team-grid">
         <div class="team-member">
           <svg class="member-avatar" viewBox="0 0 24 24">
@@ -244,7 +249,7 @@ body {
     </section>
 
     <section class="timeline">
-      <h2>Hikayemiz</h2>
+      <h1>Hikayemiz</h1>
       <div class="timeline-item">
         <h3>2010</h3>
         <p>İhtiyaç sahibi topluluklara hizmet etme vizyonuyla kuruldu</p>
@@ -275,4 +280,5 @@ Olumlu etki ve toplum hizmetiyle dolu on yılı kutluyoruz</p>
       <a href="https://linkedin.com">LinkedIn</a>
     </div>
   </footer>
+            </form>
 </body></html>

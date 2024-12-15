@@ -2,6 +2,8 @@
 
 <!DOCTYPE html>
 
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     <title>Umut Vakfı</title>
     <style>
@@ -140,8 +142,8 @@
             text-decoration: none;
         }
 .auth-button {
-  padding: 0.3rem 0.7rem; /* Butonun boyutlarını küçültmek için */
-  font-size: 0.9rem; /* Yazı boyutunu küçültmek için */
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
   border: 2px solid white;
   border-radius: 5px;
   color: black;
@@ -239,7 +241,7 @@
         </section>
 
         <section class="impact-section">
-            <h2>Etkimiz</h2>
+            <h1>Etkimiz</h1>
             <div class="impact-numbers">
                 <div class="impact-item">
                     <div class="impact-number">10,000+</div>

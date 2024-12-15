@@ -1,6 +1,12 @@
-﻿<html><head><base href="/">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="toplulukproje.Profile" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
     <title>Profilim</title>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <style>
 * {
   margin: 0;
@@ -123,6 +129,7 @@ body {
 </style>
 </head>
 <body>
+  <form id="form2"  runat="server">
   <a href="https://localhost:44323/MainPage" class="back-btn">← Ana Sayfaya Dön</a>
   
   <div class="profile-container">
@@ -166,7 +173,7 @@ body {
     <button class="edit-profile-btn">Profili Düzenle</button>
     <button class="edit-password-btn">Şifreyi Değiştir</button>
   </div>
-
+      </form>
   <script>
       // Example function to load user data
       function loadUserProfile() {
