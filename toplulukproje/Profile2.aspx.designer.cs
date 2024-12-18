@@ -11,106 +11,79 @@ namespace toplulukproje
 {
 
 
-    public partial class WebForm1
+    public partial class Profile2
     {
 
         /// <summary>
-        /// form1 denetimi.
+        /// form2 denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
 
         /// <summary>
-        /// btnCikis denetimi.
+        /// txtKullaniciAdi denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCikis;
+        protected global::System.Web.UI.WebControls.TextBox txtKullaniciAdi;
 
         /// <summary>
-        /// btnProfil denetimi.
+        /// txtKullaniciSoyadi denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnProfil;
+        protected global::System.Web.UI.WebControls.TextBox txtKullaniciSoyadi;
 
         /// <summary>
-        /// btnGiris denetimi.
+        /// txtKullaniciEmail denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGiris;
+        protected global::System.Web.UI.WebControls.TextBox txtKullaniciEmail;
 
         /// <summary>
-        /// btnKayit denetimi.
+        /// txtKullaniciTelefon denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnKayit;
+        protected global::System.Web.UI.WebControls.TextBox txtKullaniciTelefon;
 
         /// <summary>
-        /// txtCalisan1 denetimi.
+        /// txtKullaniciTckimlik denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCalisan1;
+        protected global::System.Web.UI.WebControls.TextBox txtKullaniciTckimlik;
 
         /// <summary>
-        /// txtCalisanAlan1 denetimi.
+        /// txtKullaniciKayitTarihi denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCalisanAlan1;
+        protected global::System.Web.UI.WebControls.TextBox txtKullaniciKayitTarihi;
 
         /// <summary>
-        /// txtCalisan3 denetimi.
+        /// btnEdit denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCalisan3;
-
-        /// <summary>
-        /// txtCalisanAlan3 denetimi.
-        /// </summary>
-        /// <remarks>
-        /// Otomatik olarak oluşturulan alan.
-        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCalisanAlan3;
-
-        /// <summary>
-        /// txtCalisan2 denetimi.
-        /// </summary>
-        /// <remarks>
-        /// Otomatik olarak oluşturulan alan.
-        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCalisan2;
-
-        /// <summary>
-        /// txtCalisanAlan2 denetimi.
-        /// </summary>
-        /// <remarks>
-        /// Otomatik olarak oluşturulan alan.
-        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCalisanAlan2;
+        protected global::System.Web.UI.WebControls.Button btnEdit;
     }
 }

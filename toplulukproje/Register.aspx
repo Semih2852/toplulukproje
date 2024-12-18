@@ -208,7 +208,7 @@
             <div class="form-group">
                 <asp:Label runat="server" CssClass="form-label" AssociatedControlID="txtTelefon">Telefon Numarası</asp:Label>
                 <asp:TextBox ID="txtTelefon" runat="server" CssClass="form-input"
-                    pattern="[0-9]{12}" maxlength="12" required="required"></asp:TextBox>
+                    pattern="[0-9]{10}" maxlength="10" required="required"></asp:TextBox>
             </div>
             
             <div class="form-group">

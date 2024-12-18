@@ -223,6 +223,27 @@
   top: 20px;
   right: 20px;
 }
+    .borderless-textbox {
+        border: none;       /* Kenarlığı kaldırır */
+        font-size: 18px;    /* Yazı boyutunu büyütür */
+        outline: none;      /* Odak çizgisini kaldırır */
+        background: transparent; /* Arka planı şeffaf yapar */
+        text-align: center; /* Yazıyı TextBox içinde ortalar */
+        width: 300px;       /* TextBox genişliği */
+        height: 40px;       /* TextBox yüksekliği */
+        text-align: left;
+    }
+        .borderless-textbox2 {
+        border: none;       /* Kenarlığı kaldırır */
+        font-size: 20px;    /* Yazı boyutunu büyütür */
+        outline: none;      /* Odak çizgisini kaldırır */
+        background: transparent; /* Arka planı şeffaf yapar */
+        text-align: center; /* Yazıyı TextBox içinde ortalar */
+        width: 300px;       /* TextBox genişliği */
+        height: 40px;       /* TextBox yüksekliği */
+        text-align: center;
+        color: white;
+    }
 
 .profile-button:hover {
   background: #f0f0f0;
@@ -238,8 +259,10 @@
         }
     </style>
             <h2>
-    <a href="https://localhost:44323/Login" class="auth-button">Giriş Yap</a>
-    <a href="https://localhost:44323/Register" class="auth-button">Kayıt Ol</a>
+                <asp:Button ID="btnCikis" runat="server" class="auth-button" Text="Çıkış Yap" Onclick="Cikis"/>
+                <asp:Button ID="btnProfil" runat="server" class="auth-button" Text="PROFİLİM" Onclick="Profil"/>
+<asp:Button ID="btnGiris" runat="server" class="auth-button" Text="Giriş Yap" Onclick="Giris"/>
+<asp:Button ID="btnKayit" runat="server" class="auth-button" Text="Kayıt Ol" Onclick="Kayit"/>
             </h2>
             <h1>Umut Vakfı</h1>
         </header>
@@ -261,20 +284,23 @@
                 <h1 class="section-title">Güncel Haberler</h1>
  <div class="announcement-list">
         <div class="announcement-card">
-          <div class="announcement-date">15 Mart 2024</div>
-          <div class="announcement-title">Yeni Gönüllü Programı Başlıyor</div>
-          <p>Yeni gönüllü programımız için başvurular başlamıştır. Detaylı bilgi için tıklayınız.</p>
+          <asp:TextBox ID="txtDuyuruTarihi1" runat="server" ReadOnly="true" CssClass="borderless-textbox"/>
+            <p></p>
+          <asp:TextBox ID="txtDuyuruAdi1" runat="server" ReadOnly="true" CssClass="borderless-textbox"/>
+          <p><asp:TextBox ID="txtDuyuruAciklama1" runat="server" ReadOnly="true" CssClass="borderless-textbox"/></p>
         </div>
         <div class="announcement-card">
-          <div class="announcement-date">10 Mart 2024</div>
-          <div class="announcement-title">2024 Faaliyet Raporu Yayınlandı</div>
-          <p>2024 yılı ilk çeyrek faaliyet raporumuz yayınlanmıştır. İncelemek için tıklayınız.</p>
-        </div>
-        <div class="announcement-card">
-          <div class="announcement-date">5 Mart 2024</div>
-          <div class="announcement-title">Yeni İşbirliği Anlaşması</div>
-          <p>ABC Vakfı ile yeni işbirliği anlaşmamızı imzaladık. Detaylar için tıklayınız.</p>
-        </div>
+  <asp:TextBox ID="txtDuyuruTarihi2" runat="server" ReadOnly="true" CssClass="borderless-textbox"/>
+    <p></p>
+  <asp:TextBox ID="txtDuyuruAdi2" runat="server" ReadOnly="true" CssClass="borderless-textbox"/>
+  <p><asp:TextBox ID="txtDuyuruAciklama2" runat="server" ReadOnly="true" CssClass="borderless-textbox"/></p>
+</div>
+                <div class="announcement-card">
+  <asp:TextBox ID="txtDuyuruTarihi3" runat="server" ReadOnly="true" CssClass="borderless-textbox"/>
+    <p></p>
+  <asp:TextBox ID="txtDuyuruAdi3" runat="server" ReadOnly="true" CssClass="borderless-textbox"/>
+  <p><asp:TextBox ID="txtDuyuruAciklama3" runat="server" ReadOnly="true" CssClass="borderless-textbox"/></p>
+</div>
       </div>
     </section>
 
@@ -283,37 +309,34 @@
       <div class="events-grid">
         <div class="event-card">
           <div class="event-image">
-            <h3>Eğitim Semineri</h3>
+            <h3><asp:TextBox ID="txtEtkinlikAdi1" runat="server" ReadOnly="true" CssClass="borderless-textbox2" /></h3>
           </div>
           <div class="event-content">
-            <div class="event-date">20 Mart 2024</div>
-            <h3 class="event-title">Çocuk Gelişimi Semineri</h3>
-            <p class="event-description">Uzman eğitmenlerimiz eşliğinde çocuk gelişimi ve eğitimi üzerine kapsamlı bir seminer düzenlenecektir.</p>
-            <a href="https://example.com/events/seminar" class="event-button">Detaylar</a>
+            <div class="event-date"><asp:TextBox ID="txtEtkinlikTarihi1" runat="server" ReadOnly="true" CssClass="borderless-textbox" /></div>
+            <p class="event-description"><asp:TextBox ID="txtEtkinlikAciklama1" runat="server" ReadOnly="true" CssClass="borderless-textbox" /></p>
+            <a href="https://localhost:44323/Events" class="event-button">Detaylar</a>
           </div>
         </div>
 
         <div class="event-card">
           <div class="event-image">
-            <h3>Yardım Kampanyası</h3>
+            <h3><asp:TextBox ID="txtEtkinlikAdi2" runat="server" ReadOnly="true" CssClass="borderless-textbox2" /></h3>
           </div>
           <div class="event-content">
-            <div class="event-date">25 Mart 2024</div>
-            <h3 class="event-title">Kitap Bağış Kampanyası</h3>
-            <p class="event-description">Köy okulları için kitap bağış kampanyamıza katılın. Her çocuğa bir kitap hediye edelim.</p>
-            <a href="https://example.com/events/book-donation" class="event-button">Detaylar</a>
+            <div class="event-date"><asp:TextBox ID="txtEtkinlikTarihi2" runat="server" ReadOnly="true" CssClass="borderless-textbox"/></div>
+            <p class="event-description"><asp:TextBox ID="txtEtkinlikAciklama2" runat="server" ReadOnly="true" CssClass="borderless-textbox"/></p>
+            <a href="https://localhost:44323/Events" class="event-button">Detaylar</a>
           </div>
         </div>
 
         <div class="event-card">
           <div class="event-image">
-            <h3>Sosyal Sorumluluk</h3>
+            <h3><asp:TextBox ID="txtEtkinlikAdi3" runat="server" ReadOnly="true" CssClass="borderless-textbox2" /></h3>
           </div>
           <div class="event-content">
-            <div class="event-date">1 Nisan 2024</div>
-            <h3 class="event-title">Çevre Temizlik Etkinliği</h3>
-            <p class="event-description">Sahillerimizi temizliyoruz! Gönüllülerimizle birlikte çevre temizliği etkinliğimize davetlisiniz.</p>
-            <a href="https://example.com/events/clean-up" class="event-button">Detaylar</a>
+            <div class="event-date"><asp:TextBox ID="txtEtkinlikTarihi3" runat="server" ReadOnly="true" CssClass="borderless-textbox"/></div>
+            <p class="event-description"><asp:TextBox ID="txtEtkinlikAciklama3" runat="server" ReadOnly="true" CssClass="borderless-textbox"/></p>
+            <a href="https://localhost:44323/Events" class="event-button">Detaylar</a>
           </div>
         </div>
       </div>

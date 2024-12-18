@@ -175,21 +175,25 @@ body {
   </nav>
 
   <div class="reset-container">
-          <form id="form2"  runat="server" class="reset-form" action="https://example.com/reset-password" method="POST">
+          <form id="form2"  runat="server" class="reset-form" method="POST">
       <h2 class="form-title">Şifremi Unuttum</h2>
       <p class="form-description">E-posta adresinizi girin. Sonrasında yeni şifrenizi girin. Otomatik olarak değiştirilecektir.</p>
       
       <div class="form-group">
-        <label class="form-label" for="email">E-posta Adresi</label>
-        <input type="email" id="email" name="email" class="form-input" required>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="password">Yeni Şifre</label>
-        <input type="password" id="password" name="password" class="form-input" required>
+                <asp:Label runat="server" CssClass="form-label" AssociatedControlID="txtEmail">E-posta Adresi</asp:Label>
+                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-input" 
+                    TextMode="Email" required="required"></asp:TextBox>
       </div>
       
-      <button type="submit" class="form-button">Şifre Sıfırla</button>
+      <div class="form-group">
+                <asp:Label runat="server" CssClass="form-label" AssociatedControlID="txtPassword">Şifre</asp:Label>
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" 
+                    CssClass="form-input" required="required"></asp:TextBox>
+      </div>   
+                          <asp:Button ID="btnRegister" runat="server"
+                Text="Şifre Sıfırla" 
+                CssClass="form-button" 
+                OnClick="SifreDegistir" />
       
       <div class="form-links">
         <a href="https://localhost:44323/Login">Giriş Sayfasına Dön</a>

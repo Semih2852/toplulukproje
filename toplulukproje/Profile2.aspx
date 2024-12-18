@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="toplulukproje.Profile" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Profile2.aspx.cs" Inherits="toplulukproje.Profile2" %>
 
 <!DOCTYPE html>
 
@@ -135,19 +135,19 @@ body {
 <div class="profile-info">
     <div class="info-group">
         <label for="a1">Ad:</label>
-        <asp:TextBox ID="txtKullaniciAdi" runat="server" ReadOnly="true"/>
+        <asp:TextBox ID="txtKullaniciAdi" runat="server"/>
     </div>
     <div class="info-group">
         <label for="a2">Soyad:</label>
-        <asp:TextBox ID="txtKullaniciSoyadi" runat="server" ReadOnly="true"/>
+        <asp:TextBox ID="txtKullaniciSoyadi" runat="server"/>
     </div>
     <div class="info-group">
         <label for="a3">E-posta:</label>
-        <asp:TextBox ID="txtKullaniciEmail" runat="server" ReadOnly="true" TextMode="Email"/>
+        <asp:TextBox ID="txtKullaniciEmail" runat="server" TextMode="Email"/>
     </div>
     <div class="info-group">
         <label for="a4">Telefon:</label>
-        <asp:TextBox ID="txtKullaniciTelefon" runat="server" ReadOnly="true" pattern="[0-9]{10}" maxlength="10"/>
+        <asp:TextBox ID="txtKullaniciTelefon" runat="server" pattern="[0-9]{10}" maxlength="10"/>
     </div>
     <div class="info-group">
         <label for="a5">T.C. Kimlik:</label>
@@ -159,8 +159,10 @@ body {
     </div>
 </div>
 
-        <asp:Button ID="btnGiris" runat="server" class="edit-profile-btn" Text="Bilgileri Düzenle" Onclick="Bilgi"/>
-<asp:Button ID="btnKayit" runat="server" class="edit-profile-btn" Text="Şifreyi Değiştir" Onclick="Sifre"/>
+                              <asp:Button ID="btnEdit" runat="server" 
+                Text="Profili Kaydet" 
+                CssClass="edit-profile-btn" 
+                OnClick="Duzenle"/>
   </div>
       </form>
 </body></html>

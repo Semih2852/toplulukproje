@@ -60,7 +60,7 @@ namespace toplulukproje
                 int result = command.ExecuteNonQuery();
 
                 connection.Close();
-                ShowSuccessMessage("Kayıt Başarılı!");
+                ShowSuccessMessage("Kayıt Başarılı, Giriş Sayfasına Yönlendiriliyorsunuz!");
             }
         }
 

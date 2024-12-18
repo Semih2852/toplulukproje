@@ -168,14 +168,14 @@
 .profile-button {
   display: none;
   padding: 0.3rem 0.7rem;
-  font-size: 0.9rem
+  font-size: 0.9rem;
   background: white;
   color: black;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   position: absolute;
-  top: 20px
+  top: 20px;
   right: 20px;
 }
 
@@ -194,8 +194,10 @@
         }
     </style>
             <h2>
-    <a href="https://localhost:44323/Login" class="auth-button">Giriş Yap</a>
-    <a href="https://localhost:44323/Register" class="auth-button">Kayıt Ol</a>
+                <asp:Button ID="btnCikis" runat="server" class="auth-button" Text="Çıkış Yap" Onclick="Cikis"/>
+            <asp:Button ID="btnProfil" runat="server" class="auth-button" Text="PROFİLİM" Onclick="Profil"/>
+            <asp:Button ID="btnGiris" runat="server" class="auth-button" Text="Giriş Yap" Onclick="Giris"/>
+            <asp:Button ID="btnKayit" runat="server" class="auth-button" Text="Kayıt Ol" Onclick="Kayit"/>
             </h2>
             <h1>Umut Vakfı</h1>
         </header>

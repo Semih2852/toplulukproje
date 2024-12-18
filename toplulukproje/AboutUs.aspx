@@ -171,6 +171,17 @@ body {
   right: 20px;
 }
 
+    .borderless-textbox {
+        border: none;       /* Kenarlığı kaldırır */
+        font-size: 18px;    /* Yazı boyutunu büyütür */
+        outline: none;      /* Odak çizgisini kaldırır */
+        background: transparent; /* Arka planı şeffaf yapar */
+        text-align: center; /* Yazıyı TextBox içinde ortalar */
+        width: 300px;       /* TextBox genişliği */
+        height: 40px;       /* TextBox yüksekliği */
+        text-align: center;
+    }
+
 .profile-button:hover {
   background: #f0f0f0;
 }
@@ -185,8 +196,10 @@ body {
         }
     </style>
             <h2>
-    <a href="https://localhost:44323/Login" class="auth-button">Giriş Yap</a>
-    <a href="https://localhost:44323/Register" class="auth-button">Kayıt Ol</a>
+                <asp:Button ID="btnCikis" runat="server" class="auth-button" Text="Çıkış Yap" Onclick="Cikis"/>
+                <asp:Button ID="btnProfil" runat="server" class="auth-button" Text="PROFİLİM" Onclick="Profil"/>
+  <asp:Button ID="btnGiris" runat="server" class="auth-button" Text="Giriş Yap" Onclick="Giris"/>
+<asp:Button ID="btnKayit" runat="server" class="auth-button" Text="Kayıt Ol" Onclick="Kayit"/>
             </h2>
     <h1>Umut Vakfı</h1>
   </header>
@@ -225,25 +238,29 @@ body {
           <svg class="member-avatar" viewBox="0 0 24 24">
             <circle cx="12" cy="8" r="4" fill="#1e3c72"/>
             <path fill="#1e3c72" d="M12 14c-6.1 0-8 4-8 4v2h16v-2s-1.9-4-8-4z"/>
-          </svg>
-          <h3>Semih Saykaya</h3>
-          <p>Yönetici Müdür</p>
+          </svg><p></p>
+          <asp:TextBox ID="txtCalisan1" runat="server" ReadOnly="true" CssClass="borderless-textbox"/>
+            <p></p>
+<asp:TextBox ID="txtCalisanAlan1" runat="server" ReadOnly="true" CssClass="borderless-textbox" />
+    
         </div>
         <div class="team-member">
           <svg class="member-avatar" viewBox="0 0 24 24">
             <circle cx="12" cy="8" r="4" fill="#1e3c72"/>
             <path fill="#1e3c72" d="M12 14c-6.1 0-8 4-8 4v2h16v-2s-1.9-4-8-4z"/>
-          </svg>
-          <h3>Muhammed Dursun</h3>
-          <p>Program Lideri</p>
+          </svg><p></p>
+          <asp:TextBox ID="txtCalisan3" runat="server" ReadOnly="true" CssClass="borderless-textbox"/>
+            <p></p>
+          <asp:TextBox ID="txtCalisanAlan3" runat="server" ReadOnly="true" CssClass="borderless-textbox"/>
         </div>
         <div class="team-member">
           <svg class="member-avatar" viewBox="0 0 24 24">
             <circle cx="12" cy="8" r="4" fill="#1e3c72"/>
             <path fill="#1e3c72" d="M12 14c-6.1 0-8 4-8 4v2h16v-2s-1.9-4-8-4z"/>
-          </svg>
-          <h3>Can Polat Doğan</h3>
-          <p>Topluluk Yardım Yöneticisi</p>
+          </svg><p></p>
+          <asp:TextBox ID="txtCalisan2" runat="server" ReadOnly="true" CssClass="borderless-textbox"/>
+            <p></p>
+          <asp:TextBox ID="txtCalisanAlan2" runat="server" ReadOnly="true" CssClass="borderless-textbox"/>
         </div>
       </div>
     </section>

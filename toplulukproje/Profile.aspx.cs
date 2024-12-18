@@ -1,22 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Data.SqlClient;
+using System.Data;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace toplulukproje
 {
+    public static class KullaniciBilgileri
+    {
+        public static string kullaniciAdi { get; set; }
+        public static string kullaniciSoyadi { get; set; }
+        public static string kullaniciEmail { get; set; }
+        public static long kullaniciTelefon { get; set; }
+        public static long kullaniciTckimlik { get; set; }
+        public static DateTime kullaniciKayitTarihi { get; set; }
+    }
     public partial class Profile : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ShowErrorMessage("Kayıt Başarılı!");
+            txtKullaniciAdi.Text = KullaniciBilgileri.kullaniciAdi;
+            txtKullaniciSoyadi.Text = KullaniciBilgileri.kullaniciSoyadi;
+            txtKullaniciEmail.Text = KullaniciBilgileri.kullaniciEmail;
+            txtKullaniciTelefon.Text = KullaniciBilgileri.kullaniciTelefon.ToString();
+            txtKullaniciTckimlik.Text = KullaniciBilgileri.kullaniciTckimlik.ToString();
+            txtKullaniciKayitTarihi.Text = KullaniciBilgileri.kullaniciKayitTarihi.ToString();
+
         }
-        private void ShowErrorMessage(string message)
+        public void Bilgi(object sender, EventArgs e)
         {
-            ScriptManager.RegisterStartupScript(this, GetType(), "ErrorAlert",
-                $"alert('{message}');", true);
+            Response.Redirect("Profile2.aspx");
+        }
+        public void Sifre(object sender, EventArgs e)
+        {
+            Response.Redirect("ForgotPassword.aspx");
         }
     }
 }

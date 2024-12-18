@@ -204,8 +204,10 @@
         }
     </style>
             <h2>
-    <a href="https://localhost:44323/Login" class="auth-button">Giriş Yap</a>
-    <a href="https://localhost:44323/Register" class="auth-button">Kayıt Ol</a>
+                <asp:Button ID="btnCikis" runat="server" class="auth-button" Text="Çıkış Yap" Onclick="Cikis"/>
+                <asp:Button ID="btnProfil" runat="server" class="auth-button" Text="PROFİLİM" Onclick="Profil"/>
+  <asp:Button ID="btnGiris" runat="server" class="auth-button" Text="Giriş Yap" Onclick="Giris"/>
+<asp:Button ID="btnKayit" runat="server" class="auth-button" Text="Kayıt Ol" Onclick="Kayit"/>
             </h2>
             <h1>Umut Vakfı</h1>
         </header>
@@ -250,7 +252,7 @@
                     <asp:TextBox ID="txtEmail" runat="server" CssClass="form-group" Placeholder="E-posta" TextMode="Email" />
                     <asp:TextBox ID="txtSubject" runat="server" CssClass="form-group" Placeholder="Konu" />
                     <asp:TextBox ID="txtMessage" runat="server" CssClass="form-group" Placeholder="Mesajınız" TextMode="MultiLine" Rows="5" Height="122px" Width="417px" />
-                    <asp:Button ID="btnSubmit" runat="server" CssClass="submit-btn" Text="Gönder" />
+                    <asp:Button ID="btnSubmit" runat="server" CssClass="submit-btn" Text="Gönder" Onclick="GeriBildirim"/>
                 </div>
             </div>
 

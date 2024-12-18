@@ -180,20 +180,25 @@ body {
   </nav>
 
   <div class="login-container">
-    <form id="form1"  runat="server" class="login-form" action="https://example.com/login" method="POST">
+    <form id="form1"  runat="server" class="login-form" method="POST">
       <h2 class="form-title">Giriş Yap</h2>
       
       <div class="form-group">
-        <label class="form-label" for="email">E-posta Adresi</label>
-        <input type="email" id="email" name="email" class="form-input" required>
+                <asp:Label runat="server" CssClass="form-label" AssociatedControlID="txtEmail">E-posta Adresi</asp:Label>
+                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-input" 
+                    TextMode="Email" required="required"></asp:TextBox>
       </div>
       
       <div class="form-group">
-        <label class="form-label" for="password">Şifre</label>
-        <input type="password" id="password" name="password" class="form-input" required>
+                <asp:Label runat="server" CssClass="form-label" AssociatedControlID="txtPassword">Şifre</asp:Label>
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" 
+                    CssClass="form-input" required="required"></asp:TextBox>
       </div>
       
-      <button type="submit" class="form-button">Giriş Yap</button>
+                  <asp:Button ID="btnLogin" runat="server" 
+                Text="Giriş Yap" 
+                CssClass="form-button" 
+                OnClick="GirisYap" />
       
       <div class="form-links">
         <a href="https://localhost:44323/ForgotPassword">Şifremi Unuttum?</a>

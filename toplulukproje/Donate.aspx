@@ -258,8 +258,10 @@
         }
     </style>
             <h2>
-    <a href="https://localhost:44323/Login" class="auth-button">Giriş Yap</a>
-    <a href="https://localhost:44323/Register" class="auth-button">Kayıt Ol</a>
+                <asp:Button ID="btnCikis" runat="server" class="auth-button" Text="Çıkış Yap" Onclick="Cikis"/>
+                <asp:Button ID="btnProfil" runat="server" class="auth-button" Text="PROFİLİM" Onclick="Profil"/>
+   <asp:Button ID="btnGiris" runat="server" class="auth-button" Text="Giriş Yap" Onclick="Giris"/>
+<asp:Button ID="btnKayit" runat="server" class="auth-button" Text="Kayıt Ol" Onclick="Kayit"/>
             </h2>
                 <h1>Umut Vakfı</h1>
             </header>
@@ -285,21 +287,21 @@
                         <h3>Aylık Bağış</h3>
                         <div class="donation-amount">&#8378;100</div>
                         <p>Aylık düzenli bağışınızla sürdürülebilir destek sağlayın</p>
-                        <asp:LinkButton ID="btnMonthly" runat="server" CssClass="donate-btn">Bağış Yap</asp:LinkButton>
+                        <asp:LinkButton ID="btnMonthly" runat="server" CssClass="donate-btn" OnClick="YuzTL">Bağış Yap</asp:LinkButton>
                     </div>
 
                     <div class="donation-card">
                         <h3>Üç Aylık Bağış</h3>
                         <div class="donation-amount">&#8378;250</div>
                         <p>Üç aylık bağışınızla uzun vadeli projelere destek olun</p>
-                        <asp:LinkButton ID="btnQuarterly" runat="server" CssClass="donate-btn">Bağış Yap</asp:LinkButton>
+                        <asp:LinkButton ID="btnQuarterly" runat="server" CssClass="donate-btn" OnClick="IkiTL">Bağış Yap</asp:LinkButton>
                     </div>
 
                     <div class="donation-card">
                         <h3>Yıllık Bağış</h3>
                         <div class="donation-amount">&#8378;1000</div>
                         <p>Yıllık bağışınızla büyük değişimlere katkıda bulunun</p>
-                        <asp:LinkButton ID="btnYearly" runat="server" CssClass="donate-btn">Bağış Yap</asp:LinkButton>
+                        <asp:LinkButton ID="btnYearly" runat="server" CssClass="donate-btn" OnClick="BinTL" >Bağış Yap</asp:LinkButton>
                     </div>
                 </div>
 
@@ -311,14 +313,22 @@
                             <asp:TextBox ID="txtAmount" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label for="name">Ad Soyad</label>
+                            <label for="name">Ad</label>
                             <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label for="email">E-posta</label>
-                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                        <label for="name">Soyad</label>
+                        <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control"></asp:TextBox>
+</div>
+                        <div class="form-group">
+                            <label>Bağış Yapılan Kuruluş İsmi</label>
+                            <asp:TextBox ID="txtkurulus" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Button ID="btnSubmit" runat="server" CssClass="donate-btn" Text="Bağış Yap" />
+                                                <div class="form-group">
+                            <label>Bağış İçin Açıklama</label>
+                            <asp:TextBox ID="txtAciklama" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                        <asp:Button ID="btnSubmit" runat="server" CssClass="donate-btn" Text="Bağış Yap" OnClick="BagisYap" />
                     </div>
                 </div>
 
