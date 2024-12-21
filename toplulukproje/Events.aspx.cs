@@ -17,17 +17,11 @@ namespace toplulukproje
             }
             else
             {
-                ShowSuccessMessage("Bu sayfaya erişebilmek için GİRİŞ YAPMALISINIZ!");
+                ShowErrorMessage("Bu sayfaya erişebilmek için GİRİŞ YAPMALISINIZ!");
             }
         }
 
         private void ShowErrorMessage(string message)
-        {
-            ScriptManager.RegisterStartupScript(this, GetType(), "ErrorAlert",
-                $"alert('{message}');", true);
-        }
-
-        private void ShowSuccessMessage(string message)
         {
             ScriptManager.RegisterStartupScript(this, GetType(), "SuccessAlert",
                 $"alert('{message}'); window.location.href='Activities.aspx';", true);
