@@ -259,6 +259,7 @@
     </style>
             <h2>
                 <asp:Button ID="btnCikis" runat="server" class="auth-button" Text="Çıkış Yap" Onclick="Cikis"/>
+                <asp:Button ID="btnPanel" runat="server" class="auth-button" Text="PANEL" Onclick="Panel"/>
                 <asp:Button ID="btnProfil" runat="server" class="auth-button" Text="PROFİLİM" Onclick="Profil"/>
    <asp:Button ID="btnGiris" runat="server" class="auth-button" Text="Giriş Yap" Onclick="Giris"/>
 <asp:Button ID="btnKayit" runat="server" class="auth-button" Text="Kayıt Ol" Onclick="Kayit"/>

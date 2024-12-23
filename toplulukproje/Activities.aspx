@@ -225,7 +225,7 @@
 }
     .borderless-textbox {
         border: none;       /* Kenarlığı kaldırır */
-        font-size: 18px;    /* Yazı boyutunu büyütür */
+        font-size: 14px;    /* Yazı boyutunu büyütür */
         outline: none;      /* Odak çizgisini kaldırır */
         background: transparent; /* Arka planı şeffaf yapar */
         text-align: center; /* Yazıyı TextBox içinde ortalar */
@@ -235,7 +235,7 @@
     }
         .borderless-textbox2 {
         border: none;       /* Kenarlığı kaldırır */
-        font-size: 20px;    /* Yazı boyutunu büyütür */
+        font-size: 16px;    /* Yazı boyutunu büyütür */
         outline: none;      /* Odak çizgisini kaldırır */
         background: transparent; /* Arka planı şeffaf yapar */
         text-align: center; /* Yazıyı TextBox içinde ortalar */
@@ -260,6 +260,7 @@
     </style>
             <h2>
                 <asp:Button ID="btnCikis" runat="server" class="auth-button" Text="Çıkış Yap" Onclick="Cikis"/>
+                <asp:Button ID="btnPanel" runat="server" class="auth-button" Text="PANEL" Onclick="Panel"/>
                 <asp:Button ID="btnProfil" runat="server" class="auth-button" Text="PROFİLİM" Onclick="Profil"/>
 <asp:Button ID="btnGiris" runat="server" class="auth-button" Text="Giriş Yap" Onclick="Giris"/>
 <asp:Button ID="btnKayit" runat="server" class="auth-button" Text="Kayıt Ol" Onclick="Kayit"/>

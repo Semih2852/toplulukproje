@@ -2,21 +2,22 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace toplulukproje
 {
     public partial class Panel : System.Web.UI.Page
     {
+        string connectionString = "Data Source=DESKTOP-NJB41HI\\MSSQLSERVER_2022;Initial Catalog=gonullutopluluk;Integrated Security=True;Encrypt=False;";
         protected void Page_Load(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=DESKTOP-NJB41HI\\MSSQLSERVER_2022;Initial Catalog=gonullutopluluk;Integrated Security=True;Encrypt=False;";
 
             // Kullanıcı oturum durumuna göre butonları görünürlük ayarı
-            if (Session["Yetki"].ToString() == "Admin")
+            if (Session["IsAdminAuthenticated"] != null && (bool)Session["IsAdminAuthenticated"] == true)
             {
                 if (!IsPostBack) // Sayfa ilk kez yüklendiğinde çalışır
                 {
-                    GetPanel(connectionString);
+                    
                 }
             }
             else
@@ -25,60 +26,116 @@ namespace toplulukproje
             }
         }
 
-        private void GetPanel(string connectionString)
+        public void CalisanGoster(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                try
+                con.Open();
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM calisan_bilgileri", con))
                 {
-                    SqlCommand command = new SqlCommand("PanelGetir", connection);
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        int index = 1; // Dinamik kontrol için index
-                        while (reader.Read())
-                        {
-                            switch (index)
-                            {
-                                case 1:
-                                    txtCalisan1.Text = $"{reader["calisan_adi"]} {reader["calisan_soyadi"]}";
-                                    txtCalisanAlan1.Text = reader["calisan_alan"].ToString();
-                                    break;
-                                case 2:
-                                    txtCalisan2.Text = $"{reader["calisan_adi"]} {reader["calisan_soyadi"]}";
-                                    txtCalisanAlan2.Text = reader["calisan_alan"].ToString();
-                                    break;
-                                case 3:
-                                    txtCalisan3.Text = $"{reader["calisan_adi"]} {reader["calisan_soyadi"]}";
-                                    txtCalisanAlan3.Text = reader["calisan_alan"].ToString();
-                                    break;
-                            }
-                            index++;
-                            if (index > 3) break; // Sadece 3 çalışanı göster
-                        }
-
-                        if (index == 1) // Hiç kayıt gelmediğinde
-                        {
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                }
-                finally
-                {
-                    connection.Close();
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    GridView1.DataSource = ds.Tables[0];
+                    GridView1.DataBind();
                 }
             }
         }
-        public void Cikis(object sender, EventArgs e)
+        public void KullaniciGoster(object sender, EventArgs e)
         {
-            Session["IsAuthenticated"] = null;
-            Response.Redirect("MainPage.aspx");
-        }
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
 
+                // Correct SQL query syntax to call the function without parameters
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM dbo.fn_kullanici_detaylari()", con))
+                {
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);  // Fill the dataset with the result from the function
+
+                    // Bind the first table from the dataset to the GridView
+                    GridView1.DataSource = ds.Tables[0];
+                    GridView1.DataBind();
+                }
+            }
+        }
+        public void YetkiliGoster(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM yetkili_bilgileri", con))
+                {
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    GridView1.DataSource = ds.Tables[0];
+                    GridView1.DataBind();
+                }
+            }
+        }
+        public void GeriBildirimGoster(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM geribildirim", con))
+                {
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    GridView1.DataSource = ds.Tables[0];
+                    GridView1.DataBind();
+                }
+            }
+        }
+        public void EtkinlikTumGoster(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                // Correct SQL query syntax to call the function without parameters
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM dbo.fn_etkinlik_panel()", con))
+                {
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);  // Fill the dataset with the result from the function
+
+                    // Bind the first table from the dataset to the GridView
+                    GridView1.DataSource = ds.Tables[0];
+                    GridView1.DataBind();
+                }
+            }
+        }
+        public void DuyuruGoster(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM duyurular", con))
+                {
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    GridView1.DataSource = ds.Tables[0];
+                    GridView1.DataBind();
+                }
+            }
+        }
+        public void BagisGoster(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                // Correct SQL query syntax to call the function without parameters
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM dbo.fn_bagis_detaylari()", con))
+                {
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);  // Fill the dataset with the result from the function
+
+                    // Bind the first table from the dataset to the GridView
+                    GridView1.DataSource = ds.Tables[0];
+                    GridView1.DataBind();
+                }
+            }
+        }
         private void ShowErrorMessage(string message)
         {
             ScriptManager.RegisterStartupScript(this, GetType(), "SuccessAlert",

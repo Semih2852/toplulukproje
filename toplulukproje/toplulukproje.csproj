@@ -242,7 +242,6 @@
     </Compile>
     <Compile Include="Events.aspx.cs">
       <DependentUpon>Events.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Events.aspx.designer.cs">
       <DependentUpon>Events.aspx</DependentUpon>

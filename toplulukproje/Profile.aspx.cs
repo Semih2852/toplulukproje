@@ -7,6 +7,7 @@ namespace toplulukproje
 {
     public static class KullaniciBilgileri
     {
+        public static int kullaniciID { get; set; }
         public static string kullaniciAdi { get; set; }
         public static string kullaniciSoyadi { get; set; }
         public static string kullaniciEmail { get; set; }

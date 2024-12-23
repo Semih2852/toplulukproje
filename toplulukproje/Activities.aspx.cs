@@ -20,13 +20,23 @@ namespace toplulukproje
             {
                 btnGiris.Visible = false;
                 btnKayit.Visible = false;
+                btnPanel.Visible = false;
                 btnProfil.Visible = true;
+                btnCikis.Visible = true;
+            }
+            else if (Session["IsAdminAuthenticated"] != null && (bool)Session["IsAdminAuthenticated"] == true)
+            {
+                btnGiris.Visible = false;
+                btnKayit.Visible = false;
+                btnPanel.Visible = true;
+                btnProfil.Visible = false;
                 btnCikis.Visible = true;
             }
             else
             {
                 btnGiris.Visible = true;
                 btnKayit.Visible = true;
+                btnPanel.Visible = false;
                 btnProfil.Visible = false;
                 btnCikis.Visible = false;
             }
@@ -151,9 +161,19 @@ namespace toplulukproje
         {
             Response.Redirect("Profile.aspx");
         }
+         public void Panel(object sender, EventArgs e)
+        {
+            Response.Redirect("Panel.aspx");
+        }
         public void Cikis(object sender, EventArgs e)
         {
             Session["IsAuthenticated"] = null;
+            Session["IsAdminAuthenticated"] = null;
+            EtkinlikKayit.kayitKontrol1 = 0;
+            EtkinlikKayit.kayitKontrol2 = 0;
+            EtkinlikKayit.kayitKontrol3 = 0;
+            EtkinlikKayit.kayitKontrol4 = 0;
+            EtkinlikKayit.kayitKontrol5 = 0;
             Response.Redirect("MainPage.aspx");
         }
     }

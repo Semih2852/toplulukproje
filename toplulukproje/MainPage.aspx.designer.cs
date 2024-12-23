@@ -33,6 +33,15 @@ namespace toplulukproje
         protected global::System.Web.UI.WebControls.Button btnCikis;
 
         /// <summary>
+        /// btnPanel denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik olarak oluşturulan alan.
+        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPanel;
+
+        /// <summary>
         /// btnProfil denetimi.
         /// </summary>
         /// <remarks>
